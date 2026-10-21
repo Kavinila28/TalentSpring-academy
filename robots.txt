@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# Add a sitemap line only after publishing and replacing the URL with the exact live sitemap URL.
