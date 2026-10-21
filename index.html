@@ -1,220 +1,870 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#102a43">
-  <meta name="description" content="Explore project-based virtual internship programs in data science, AI and machine learning, and web development with TalentSpring Academy.">
-  <meta property="og:title" content="TalentSpring Academy | Learn. Build. Grow.">
-  <meta property="og:description" content="Build practical skills through structured, project-based virtual learning experiences.">
-  <meta property="og:type" content="website">
-  <title>TalentSpring Academy | Virtual Internships for Students</title>
-  <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"EducationalOrganization",
-    "name":"TalentSpring Academy",
-    "description":"Project-based virtual learning programs for college students.",
-    "url":""
-  }
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TalentSpring Academy offers project-based virtual internship learning opportunities. Learn, build real-world projects, and grow your skills.">
+  <meta name="theme-color" content="#102c28">
+  <title>TalentSpring Academy | Learn. Build. Grow.</title>
+
+  <style>
+    :root {
+      --navy: #102c28;
+      --green: #247653;
+      --light-green: #eaf5ed;
+      --gold: #e4b85b;
+      --cream: #fbfaf5;
+      --text: #25352f;
+      --muted: #66756d;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #e6e9e3;
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--navy);
+      font-size: 19px;
+      font-weight: 800;
+    }
+
+    .brand-icon {
+      width: 43px;
+      height: 43px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: var(--light-green);
+      font-size: 25px;
+    }
+
+    .brand small {
+      display: block;
+      font-size: 10px;
+      color: var(--green);
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    .btn {
+      display: inline-block;
+      border: none;
+      border-radius: 9px;
+      padding: 13px 21px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: white;
+      background: var(--green);
+    }
+
+    .btn-primary:hover {
+      background: var(--navy);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .btn-outline {
+      border: 1px solid #d2ded4;
+      color: var(--navy);
+      background: white;
+    }
+
+    .hero {
+      padding: 95px 0;
+      background:
+        radial-gradient(circle at 85% 20%, #d8eadb 0, transparent 30%),
+        linear-gradient(130deg, #fbfaf5, #f0f6ed);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: #e4efe4;
+      color: var(--green);
+      padding: 7px 13px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5.5vw, 65px);
+      line-height: 1.12;
+      color: var(--navy);
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: var(--green);
+    }
+
+    .hero p {
+      max-width: 570px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-art {
+      background: var(--navy);
+      min-height: 340px;
+      border-radius: 30px;
+      padding: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      color: white;
+    }
+
+    .hero-art::before,
+    .hero-art::after {
+      content: "";
+      position: absolute;
+      border: 1px solid #ffffff20;
+      border-radius: 50%;
+    }
+
+    .hero-art::before {
+      width: 280px;
+      height: 280px;
+      top: -100px;
+      right: -90px;
+    }
+
+    .hero-art::after {
+      width: 200px;
+      height: 200px;
+      bottom: -110px;
+      left: -50px;
+    }
+
+    .plant {
+      font-size: 85px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .hero-art h2 {
+      font-size: 27px;
+      text-align: center;
+      color: var(--gold);
+    }
+
+    .hero-art p {
+      color: #d5e3da;
+      text-align: center;
+      font-size: 14px;
+      margin: 10px auto 0;
+    }
+
+    section {
+      padding: 78px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 42px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: clamp(29px, 4vw, 40px);
+      line-height: 1.2;
+      margin-bottom: 13px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .programs {
+      background: white;
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 23px;
+    }
+
+    .program-card {
+      background: var(--cream);
+      border: 1px solid #e8ebe4;
+      border-radius: 18px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .program-icon {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: var(--light-green);
+      font-size: 27px;
+      margin-bottom: 20px;
+    }
+
+    .program-card h3 {
+      color: var(--navy);
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .program-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .program-card ul {
+      padding-left: 19px;
+      margin-bottom: 25px;
+      font-size: 13px;
+      color: var(--text);
+    }
+
+    .program-card .btn {
+      margin-top: auto;
+      width: 100%;
+      text-align: center;
+    }
+
+    .tag {
+      background: #fff0d0;
+      color: #785b19;
+      border-radius: 5px;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 4px 8px;
+      margin-bottom: 13px;
+      letter-spacing: .5px;
+    }
+
+    .tag-open {
+      background: #dcefe2;
+      color: #206340;
+    }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      padding: 25px;
+      background: white;
+      border-radius: 14px;
+      border: 1px solid #e9ece5;
+    }
+
+    .step-number {
+      color: var(--green);
+      font-size: 30px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .step h3 {
+      color: var(--navy);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .about {
+      background: var(--navy);
+      color: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .about h2 {
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #d1ddd5;
+      margin-bottom: 16px;
+    }
+
+    .about-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .about-list div {
+      background: #ffffff0d;
+      border: 1px solid #ffffff18;
+      padding: 17px;
+      border-radius: 11px;
+    }
+
+    .about-list strong {
+      display: block;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .about-list span {
+      font-size: 13px;
+      color: #d1ddd5;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: auto;
+      display: grid;
+      gap: 13px;
+    }
+
+    details {
+      background: white;
+      border: 1px solid #e6eae2;
+      padding: 19px 22px;
+      border-radius: 12px;
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    details p {
+      color: var(--muted);
+      margin-top: 13px;
+      font-size: 14px;
+    }
+
+    .cta {
+      text-align: center;
+      background: var(--light-green);
+    }
+
+    .cta h2 {
+      color: var(--navy);
+      font-size: clamp(30px, 4vw, 43px);
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      color: var(--muted);
+      margin: 0 auto 25px;
+      max-width: 600px;
+    }
+
+    footer {
+      background: #0b211e;
+      color: #d1ddd5;
+      padding: 35px 0;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    footer p {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    footer a {
+      color: var(--gold);
+      font-size: 13px;
+    }
+
+    .notice {
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px solid #ffffff20;
+      font-size: 11px;
+      color: #b8c8bf;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      .hero-art {
+        min-height: 260px;
+      }
+
+      .program-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .how-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        gap: 13px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      nav {
+        padding: 13px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+        font-size: 12px;
+      }
+
+      .program-grid,
+      .how-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="container nav-wrap">
+
+  <header>
+    <nav class="container">
       <a class="brand" href="#home" aria-label="TalentSpring Academy home">
-        <span class="brand-mark" aria-hidden="true">✦</span>
-        <span class="brand-words"><strong>Talent<span>Spring</span></strong><small>ACADEMY</small></span>
+        <span class="brand-icon">🌱</span>
+        <span>
+          TalentSpring Academy
+          <small>LEARN. BUILD. GROW.</small>
+        </span>
       </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-      <nav class="nav" id="mainNav" aria-label="Main navigation">
-        <a href="#internships">Internships</a>
-        <a href="#how-it-works">How it works</a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#programs">Internships</a>
+        <a href="#how-it-works">How It Works</a>
         <a href="#about">About</a>
-        <a href="#verify">Verify certificate</a>
-        <button class="btn btn-small btn-outline" data-open-dashboard>Student dashboard</button>
-      </nav>
-    </div>
+        <a href="#faq">FAQs</a>
+        <a class="btn btn-primary"
+           href="https://docs.google.com/forms/d/e/1FAIpQLSfs6i6IX2VY7UxD7PfuQFddSDhJZ1Bq3nMp9V-VK0BOsmqJjg/viewform?usp=dialog"
+           target="_blank"
+           rel="noopener noreferrer">Apply Now ↗</a>
+      </div>
+    </nav>
   </header>
 
-  <main id="main">
+  <main>
     <section class="hero" id="home">
       <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> PROJECT-BASED VIRTUAL LEARNING</p>
-          <h1>Your potential deserves a <em>place to grow.</em></h1>
-          <p class="hero-text">Learn by doing. Build practical projects, practise useful skills, and create work you can confidently explain.</p>
-          <div class="hero-actions">
-            <a class="btn btn-gold" href="#internships">Explore internships <span aria-hidden="true">→</span></a>
-            <a class="btn btn-ghost" href="#how-it-works">How it works</a>
-          </div>
-          <div class="hero-points">
-            <span>✓ Remote learning</span><span>✓ Clear project milestones</span><span>✓ Transparent criteria</span>
+        <div>
+          <span class="eyebrow">YOUR JOURNEY STARTS HERE</span>
+          <h1>Turn your potential into <span>real skills.</span></h1>
+          <p>
+            Learn by doing. Build practical projects, strengthen your portfolio,
+            and take the next step in your career with TalentSpring Academy's
+            virtual, project-based learning opportunities.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#programs">Explore Internships →</a>
+            <a class="btn btn-outline" href="#how-it-works">How It Works</a>
           </div>
         </div>
-        <div class="hero-card">
-          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-          <div class="sprout-icon" aria-hidden="true">
-            <span class="leaf leaf-left"></span><span class="leaf leaf-right"></span><span class="stem"></span>
-            <span class="book-page page-left"></span><span class="book-page page-right"></span>
-          </div>
-          <p class="hero-card-label">LEARN. BUILD. GROW.</p>
-          <h2>Turn curiosity<br>into capability.</h2>
-          <p>One project at a time.</p>
-          <div class="hero-card-bottom"><span class="mini-dot"></span> Made for student growth</div>
+
+        <div class="hero-art">
+          <div class="plant">🌱</div>
+          <h2>Learn. Build. Grow.</h2>
+          <p>Small steps today. Stronger skills tomorrow.</p>
         </div>
       </div>
     </section>
 
-    <section class="trust-strip">
-      <div class="container trust-grid">
-        <div><strong>Practical</strong><span>Project-led learning</span></div>
-        <div><strong>Transparent</strong><span>Clear expectations</span></div>
-        <div><strong>Accessible</strong><span>Remote-first format</span></div>
-        <div><strong>Portfolio-minded</strong><span>Show what you build</span></div>
-      </div>
-    </section>
-
-    <section class="section" id="internships">
+    <section class="programs" id="programs">
       <div class="container">
         <div class="section-heading">
-          <div><p class="eyebrow">EXPLORE YOUR NEXT STEP</p><h2>Find a program to <em>grow with.</em></h2></div>
-          <p>Start with a focused project, follow weekly milestones, and finish with a documented deliverable.</p>
+          <span class="eyebrow">EXPLORE YOUR PATH</span>
+          <h2>Find your learning track</h2>
+          <p>
+            Choose a field that interests you and start developing practical,
+            project-based skills.
+          </p>
         </div>
-        <div class="filter-row" role="group" aria-label="Filter programs">
-          <button class="filter active" data-filter="all">All programs</button>
-          <button class="filter" data-filter="data">Data Science</button>
-          <button class="filter" data-filter="ai">AI &amp; ML</button>
-          <button class="filter" data-filter="web">Web Development</button>
+
+        <div class="program-grid">
+
+          <article class="program-card">
+            <div class="program-icon">📊</div>
+            <span class="tag tag-open">PILOT PROGRAM</span>
+            <h3>Data Science & Analytics</h3>
+            <p>
+              Explore data cleaning, analysis, visualization, and insight
+              generation through a practical project.
+            </p>
+            <ul>
+              <li>Data analysis fundamentals</li>
+              <li>Python and visualization</li>
+              <li>Project-based learning</li>
+            </ul>
+            <a class="btn btn-primary"
+               href="https://docs.google.com/forms/d/e/1FAIpQLSfs6i6IX2VY7UxD7PfuQFddSDhJZ1Bq3nMp9V-VK0BOsmqJjg/viewform?usp=dialog"
+               target="_blank" rel="noopener noreferrer">
+              Apply for this internship →
+            </a>
+          </article>
+
+          <article class="program-card">
+            <div class="program-icon">🤖</div>
+            <span class="tag">PLANNED TRACK</span>
+            <h3>AI & Machine Learning</h3>
+            <p>
+              Learn the foundations of intelligent systems, data preparation,
+              model training, and evaluation.
+            </p>
+            <ul>
+              <li>Machine learning basics</li>
+              <li>Model evaluation concepts</li>
+              <li>Guided project exercises</li>
+            </ul>
+            <a class="btn btn-outline"
+               href="https://docs.google.com/forms/d/e/1FAIpQLSfs6i6IX2VY7UxD7PfuQFddSDhJZ1Bq3nMp9V-VK0BOsmqJjg/viewform?usp=dialog"
+               target="_blank" rel="noopener noreferrer">
+              Register Interest →
+            </a>
+          </article>
+
+          <article class="program-card">
+            <div class="program-icon">💻</div>
+            <span class="tag">PLANNED TRACK</span>
+            <h3>Web Development</h3>
+            <p>
+              Explore responsive website design, frontend development,
+              and the fundamentals of building for the web.
+            </p>
+            <ul>
+              <li>HTML and CSS</li>
+              <li>JavaScript fundamentals</li>
+              <li>Website project practice</li>
+            </ul>
+            <a class="btn btn-outline"
+               href="https://docs.google.com/forms/d/e/1FAIpQLSfs6i6IX2VY7UxD7PfuQFddSDhJZ1Bq3nMp9V-VK0BOsmqJjg/viewform?usp=dialog"
+               target="_blank" rel="noopener noreferrer">
+              Register Interest →
+            </a>
+          </article>
+
         </div>
-        <div class="program-grid" id="programGrid">
-          <article class="program-card" data-category="data">
-            <div class="program-art art-data"><span class="art-icon">▥</span><span class="art-tag">PILOT CONCEPT</span></div>
-            <div class="program-body">
-              <div class="card-meta"><span>DATA SCIENCE</span><span>4 weeks · Remote</span></div>
-              <h3>Data Science &amp; Analytics</h3>
-              <p>Explore a sample dataset, clean data, visualise patterns, and present insights in a dashboard or report.</p>
-              <div class="skill-tags"><span>Python / Excel</span><span>Visualisation</span><span>Reporting</span></div>
-              <button class="btn btn-card" data-apply="data">View program &amp; apply <span>→</span></button>
-            </div>
-          </article>
-          <article class="program-card" data-category="ai">
-            <div class="program-art art-ai"><span class="art-icon">⌘</span><span class="art-tag">PLANNED TRACK</span></div>
-            <div class="program-body">
-              <div class="card-meta"><span>AI &amp; MACHINE LEARNING</span><span>4 weeks · Remote</span></div>
-              <h3>AI &amp; Machine Learning</h3>
-              <p>Explore a beginner-friendly ML workflow using an appropriate public dataset and document model limitations.</p>
-              <div class="skill-tags"><span>Python</span><span>Model evaluation</span><span>Ethical AI</span></div>
-              <button class="btn btn-card" data-apply="ai">View program &amp; apply <span>→</span></button>
-            </div>
-          </article>
-          <article class="program-card" data-category="web">
-            <div class="program-art art-web"><span class="art-icon">&lt;/&gt;</span><span class="art-tag">PLANNED TRACK</span></div>
-            <div class="program-body">
-              <div class="card-meta"><span>WEB DEVELOPMENT</span><span>4 weeks · Remote</span></div>
-              <h3>Web Development</h3>
-              <p>Plan and build a responsive multi-section website, then document your code and deployment steps.</p>
-              <div class="skill-tags"><span>HTML &amp; CSS</span><span>JavaScript</span><span>Responsive UI</span></div>
-              <button class="btn btn-card" data-apply="web">View program &amp; apply <span>→</span></button>
-            </div>
-          </article>
-        </div>
-        <p class="notice"><strong>Important:</strong> This starter site contains sample program descriptions. Publish applications only after you have finalised the program, dates, mentoring capacity, tasks, and selection criteria. “Planned” tracks are not open opportunities.</p>
       </div>
     </section>
 
-    <section class="section section-soft" id="how-it-works">
+    <section id="how-it-works">
       <div class="container">
-        <div class="section-heading centered">
-          <div><p class="eyebrow">A CLEAR PROCESS</p><h2>From application to <em>achievement.</em></h2></div>
-          <p>Know what to expect at every stage before you begin.</p>
+        <div class="section-heading">
+          <span class="eyebrow">SIMPLE & PRACTICAL</span>
+          <h2>How it works</h2>
+          <p>
+            A structured path to help you learn, practise, and showcase
+            your work.
+          </p>
         </div>
-        <div class="steps-grid">
-          <div class="step"><span class="step-number">01</span><div class="step-icon">⌕</div><h3>Explore</h3><p>Review the program brief, eligibility, duration, workload, and completion criteria.</p></div>
-          <div class="step"><span class="step-number">02</span><div class="step-icon">↗</div><h3>Apply</h3><p>Submit your application through the official form. Selection depends on published criteria and capacity.</p></div>
-          <div class="step"><span class="step-number">03</span><div class="step-icon">⌘</div><h3>Build</h3><p>Complete project milestones and submit your work for review and feedback.</p></div>
-          <div class="step"><span class="step-number">04</span><div class="step-icon">✧</div><h3>Complete</h3><p>Eligible participants receive a standard completion certificate at no extra charge.</p></div>
+
+        <div class="how-grid">
+          <div class="step">
+            <div class="step-number">01</div>
+            <h3>Apply Online</h3>
+            <p>Complete the application form and choose your area of interest.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">02</div>
+            <h3>Get Started</h3>
+            <p>Review the program instructions and follow the learning plan shared with selected participants.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">03</div>
+            <h3>Build Projects</h3>
+            <p>Practise your skills through tasks and work towards a project deliverable.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">04</div>
+            <h3>Showcase Your Work</h3>
+            <p>Document your project, reflect on your learning, and add your work to your portfolio.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="about">
+    <section class="about" id="about">
       <div class="container about-grid">
-        <div class="about-visual"><div class="about-sun"></div><div class="about-book">⌁</div><span class="about-caption">LEARN · BUILD · GROW</span></div>
-        <div class="about-copy"><p class="eyebrow">ABOUT TALENTSPRING</p><h2>Small steps. <em>Meaningful growth.</em></h2>
-          <p>TalentSpring Academy is being developed to help college students explore practical skills through structured, project-based virtual learning experiences.</p>
-          <p>Our approach is built around clear tasks, honest assessment, feedback, and work that students can document in a portfolio.</p>
-          <ul class="check-list"><li>Defined tasks and learning outcomes</li><li>Transparent selection and completion criteria</li><li>Respect for student privacy and original work</li><li>No promises of jobs, stipends, or accreditation without a genuine basis</li></ul>
-          <a class="text-link" href="#faq">Read our FAQs <span>→</span></a>
+        <div>
+          <span class="eyebrow">ABOUT US</span>
+          <h2>Building skills through learning by doing.</h2>
+          <p>
+            TalentSpring Academy is an early-stage learning initiative designed
+            to help students explore technology and practise practical skills
+            through structured projects.
+          </p>
+          <p>
+            Our goal is to make skill development approachable, encourage
+            curiosity, and help learners build work they can explain and share.
+          </p>
+          <a class="btn btn-gold" href="#programs">Explore Learning Tracks →</a>
+        </div>
+
+        <div class="about-list">
+          <div>
+            <strong>🌍 Virtual Learning</strong>
+            <span>Designed for remote participation, subject to each program's schedule.</span>
+          </div>
+          <div>
+            <strong>🛠️ Practical Projects</strong>
+            <span>Focus on applying concepts and creating portfolio-ready work.</span>
+          </div>
+          <div>
+            <strong>📚 Student-Focused</strong>
+            <span>Learning opportunities for students who want to strengthen their skills.</span>
+          </div>
+          <div>
+            <strong>🚀 Continuous Growth</strong>
+            <span>Build confidence by practising, reflecting, and improving.</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-navy" id="verify">
-      <div class="container verify-grid">
-        <div><p class="eyebrow eyebrow-gold">CERTIFICATE LOOKUP</p><h2>Verify a completion <em>record.</em></h2><p>Enter a certificate ID to check the sample verification register included with this starter demo.</p><p class="small-muted">Demo note: this lookup uses sample data in your browser code. It is not a live or authoritative certificate database until connected to a trusted backend or maintained verification source.</p></div>
-        <form class="verify-form" id="verifyForm">
-          <label for="certificateId">Certificate ID</label>
-          <div class="input-button"><input id="certificateId" name="certificateId" placeholder="e.g. TSA-DEMO-001" autocomplete="off" required><button class="btn btn-gold" type="submit">Verify</button></div>
-          <div id="verifyResult" class="verify-result" aria-live="polite"></div>
-        </form>
+    <section id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">NEED TO KNOW?</span>
+          <h2>Frequently asked questions</h2>
+          <p>Some helpful details before you apply.</p>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Who can apply?</summary>
+            <p>
+              Students interested in learning and developing practical skills
+              can submit an application. Eligibility and selection depend on
+              the specific program.
+            </p>
+          </details>
+
+          <details>
+            <summary>Are the programs online?</summary>
+            <p>
+              The learning initiative is designed for virtual participation.
+              Specific schedules, instructions, and requirements will be
+              communicated for each program.
+            </p>
+          </details>
+
+          <details>
+            <summary>Is there an application fee?</summary>
+            <p>
+              There is no application fee charged by this website. Any future
+              optional paid services, if introduced, should have their costs
+              and terms clearly disclosed before purchase.
+            </p>
+          </details>
+
+          <details>
+            <summary>Will I receive a certificate?</summary>
+            <p>
+              Certificate eligibility and any applicable conditions must be
+              confirmed in the official details for the particular program.
+              Please do not assume a certificate is guaranteed simply by
+              submitting an application.
+            </p>
+          </details>
+
+          <details>
+            <summary>Does applying guarantee selection or a job?</summary>
+            <p>
+              No. Submitting an application does not guarantee selection,
+              employment, a stipend, placement, or a job offer.
+            </p>
+          </details>
+
+          <details>
+            <summary>How do I apply?</summary>
+            <p>
+              Click any Apply or Register Interest button on this website.
+              It will open the TalentSpring Academy Google Form.
+            </p>
+          </details>
+        </div>
       </div>
     </section>
 
-    <section class="section section-soft" id="faq">
-      <div class="container faq-container">
-        <div class="section-heading"><div><p class="eyebrow">GOOD TO KNOW</p><h2>Frequently asked <em>questions.</em></h2></div></div>
-        <details><summary>Are the internships free?</summary><p>The sample pilot described in this starter is planned as free. Confirm the final fees, dates and program details before accepting applications. Any future paid service must be clearly disclosed in advance.</p></details>
-        <details><summary>Will I receive a certificate?</summary><p>Eligible participants should receive a standard completion certificate at no additional charge after meeting the published requirements. A certificate documents completion; it does not guarantee employment or accreditation.</p></details>
-        <details><summary>Is this a job or a guaranteed placement?</summary><p>No. The programs described here are educational, project-based experiences unless a specific, verified employment arrangement is clearly stated.</p></details>
-        <details><summary>How do I submit tasks?</summary><p>Task submission must be configured by the program administrator. This demo provides a local dashboard mockup; it does not securely transmit submissions to the founder.</p></details>
-        <details><summary>How is my application information used?</summary><p>Before launch, publish a privacy notice explaining what data you collect, why you collect it, who can access it, how long it is retained, and how applicants can request correction or deletion.</p></details>
+    <section class="cta">
+      <div class="container">
+        <span class="eyebrow">TAKE THE FIRST STEP</span>
+        <h2>Your next skill starts here.</h2>
+        <p>
+          Explore your interests, practise new concepts, and take a step
+          towards building your portfolio.
+        </p>
+        <a class="btn btn-primary"
+           href="https://docs.google.com/forms/d/e/1FAIpQLSfs6i6IX2VY7UxD7PfuQFddSDhJZ1Bq3nMp9V-VK0BOsmqJjg/viewform?usp=dialog"
+           target="_blank" rel="noopener noreferrer">
+          Open Application Form ↗
+        </a>
       </div>
-    </section>
-
-    <section class="cta-section">
-      <div class="container cta-inner"><div><p class="eyebrow eyebrow-gold">YOUR NEXT STEP STARTS HERE</p><h2>Ready to turn learning into <em>something real?</em></h2><p>Explore the available program details and apply when the cohort is officially open.</p></div><a class="btn btn-gold" href="#internships">Explore programs <span>→</span></a></div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div><a class="brand brand-footer" href="#home"><span class="brand-mark">✦</span><span class="brand-words"><strong>Talent<span>Spring</span></strong><small>ACADEMY</small></span></a><p>Learn. Build. Grow.</p></div>
-      <div><strong>Explore</strong><a href="#internships">Internships</a><a href="#how-it-works">How it works</a><a href="#about">About</a></div>
-      <div><strong>Student tools</strong><button class="footer-button" data-open-dashboard>Demo dashboard</button><a href="#verify">Certificate verification</a></div>
-      <div><strong>Contact</strong><p class="footer-note">Add your official support email before launch.</p><a href="#faq">FAQs &amp; policies</a></div>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong>🌱 TalentSpring Academy</strong>
+          <p>Learn. Build. Grow.</p>
+        </div>
+        <a href="#home">Back to top ↑</a>
+      </div>
+
+      <div class="notice">
+        TalentSpring Academy is an early-stage learning initiative.
+        Program availability, selection, duration, completion requirements,
+        and certificates are subject to official program communications.
+        Participation does not guarantee employment, placement, or a stipend.
+      </div>
+
+      <div class="notice">
+        © <span id="year"></span> TalentSpring Academy. All rights reserved.
+      </div>
     </div>
-    <div class="container footer-bottom"><span>© <span id="year"></span> TalentSpring Academy. All rights reserved.</span><span>Learn. Build. Grow.</span></div>
   </footer>
 
-  <dialog id="programDialog" class="modal">
-    <form method="dialog"><button class="modal-close" aria-label="Close">×</button></form>
-    <p class="eyebrow" id="modalEyebrow">PROGRAM DETAILS</p><h2 id="modalTitle">Program title</h2><p id="modalDescription"></p>
-    <div class="modal-details" id="modalDetails"></div>
-    <div id="applyNotice" class="notice"></div>
-    <form id="applicationForm" class="application-form">
-      <input type="hidden" id="programKey" name="programKey">
-      <label for="studentName">Full name</label><input id="studentName" name="studentName" autocomplete="name" required maxlength="100">
-      <label for="studentEmail">Email address</label><input id="studentEmail" name="studentEmail" type="email" autocomplete="email" required maxlength="160">
-      <label for="studentCollege">College / institution</label><input id="studentCollege" name="studentCollege" required maxlength="160">
-      <label for="studentYear">Current year of study</label><select id="studentYear" name="studentYear" required><option value="">Select year</option><option>1st year</option><option>2nd year</option><option>3rd year</option><option>4th year</option><option>Postgraduate</option><option>Other</option></select>
-      <label for="studentMotivation">Why are you interested? (max 500 characters)</label><textarea id="studentMotivation" name="studentMotivation" rows="3" maxlength="500" required></textarea>
-      <label class="consent"><input type="checkbox" id="studentConsent" required><span>I understand this is a project-based educational program and that this demo does not transmit my application to the company.</span></label>
-      <button class="btn btn-primary" type="submit">Save demo application</button>
-      <p class="form-footnote">Demo only: data is saved in this browser's local storage. It is not sent to TalentSpring Academy.</p>
-    </form>
-  </dialog>
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 
-  <dialog id="dashboardDialog" class="modal modal-wide">
-    <form method="dialog"><button class="modal-close" aria-label="Close">×</button></form>
-    <p class="eyebrow">STUDENT AREA · DEMO</p><h2>Student dashboard</h2>
-    <p class="muted">This is a browser-only prototype. Do not enter sensitive information. Demo applications and submissions stay on this device.</p>
-    <div class="dashboard-tabs"><button class="tab active" data-tab="overview">Overview</button><button class="tab" data-tab="tasks">Tasks</button><button class="tab" data-tab="applications">My applications</button></div>
-    <div id="dashboardContent"></div>
-  </dialog>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="app.js"></script>
 </body>
 </html>
