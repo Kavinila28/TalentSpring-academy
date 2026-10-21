@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TalentSpring Academy offers project-based virtual internship learning opportunities. Learn, build real-world projects, and grow your skills.">
+  <meta name="description" content="TalentSpring Academy offers virtual, project-based internship learning opportunities for students. Learn. Build. Grow.">
   <meta name="theme-color" content="#102c28">
   <title>TalentSpring Academy | Learn. Build. Grow.</title>
 
   <style>
     :root {
       --navy: #102c28;
-      --green: #247653;
+      --green: #007b57;
       --light-green: #eaf5ed;
       --gold: #e4b85b;
       --cream: #fbfaf5;
@@ -28,7 +28,7 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 85px;
+      scroll-padding-top: 90px;
     }
 
     body {
@@ -39,8 +39,8 @@
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     .container {
@@ -94,7 +94,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 22px;
       font-size: 14px;
       font-weight: 600;
     }
@@ -110,6 +110,7 @@
       padding: 13px 21px;
       font-size: 14px;
       font-weight: 700;
+      text-align: center;
       cursor: pointer;
       transition: transform .2s, background .2s;
     }
@@ -133,13 +134,13 @@
     }
 
     .btn-outline {
-      border: 1px solid #d2ded4;
+      border: 1px solid #cbded2;
       color: var(--navy);
       background: white;
     }
 
     .hero {
-      padding: 95px 0;
+      padding: 90px 0;
       background:
         radial-gradient(circle at 85% 20%, #d8eadb 0, transparent 30%),
         linear-gradient(130deg, #fbfaf5, #f0f6ed);
@@ -317,7 +318,6 @@
     .program-card .btn {
       margin-top: auto;
       width: 100%;
-      text-align: center;
     }
 
     .tag {
@@ -551,7 +551,6 @@
 </head>
 
 <body>
-
   <header>
     <nav class="container">
       <a class="brand" href="#home" aria-label="TalentSpring Academy home">
@@ -564,14 +563,11 @@
 
       <div class="nav-links">
         <a href="#home">Home</a>
-        <a href="#programs">Internships</a>
+        <a href="#programs">Internship Tracks</a>
         <a href="#how-it-works">How It Works</a>
         <a href="#about">About</a>
         <a href="#faq">FAQs</a>
-        <a class="btn btn-primary"
-           href="https://docs.google.com/forms/d/e/1FAIpQLSfs6i6IX2VY7UxD7PfuQFddSDhJZ1Bq3nMp9V-VK0BOsmqJjg/viewform?usp=dialog"
-           target="_blank"
-           rel="noopener noreferrer">Apply Now ↗</a>
+        <a class="btn btn-primary" href="#programs">Apply Now ↗</a>
       </div>
     </nav>
   </header>
@@ -585,11 +581,11 @@
           <p>
             Learn by doing. Build practical projects, strengthen your portfolio,
             and take the next step in your career with TalentSpring Academy's
-            virtual, project-based learning opportunities.
+            virtual, project-based internship learning opportunities.
           </p>
 
           <div class="hero-buttons">
-            <a class="btn btn-primary" href="#programs">Explore Internships →</a>
+            <a class="btn btn-primary" href="#programs">Explore Internship Tracks →</a>
             <a class="btn btn-outline" href="#how-it-works">How It Works</a>
           </div>
         </div>
@@ -606,19 +602,20 @@
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">EXPLORE YOUR PATH</span>
-          <h2>Find your learning track</h2>
+          <h2>Explore Our Internship Tracks</h2>
           <p>
-            Choose a field that interests you and start developing practical,
+            Choose an internship that interests you and develop practical,
             project-based skills.
           </p>
         </div>
 
         <div class="program-grid">
 
+          <!-- DATA SCIENCE INTERNSHIP -->
           <article class="program-card">
             <div class="program-icon">📊</div>
             <span class="tag tag-open">PILOT PROGRAM</span>
-            <h3>Data Science & Analytics</h3>
+            <h3>Data Science &amp; Analytics</h3>
             <p>
               Explore data cleaning, analysis, visualization, and insight
               generation through a practical project.
@@ -635,10 +632,11 @@
             </a>
           </article>
 
+          <!-- AI AND MACHINE LEARNING INTERNSHIP -->
           <article class="program-card">
             <div class="program-icon">🤖</div>
             <span class="tag">PLANNED TRACK</span>
-            <h3>AI & Machine Learning</h3>
+            <h3>AI &amp; Machine Learning</h3>
             <p>
               Learn the foundations of intelligent systems, data preparation,
               model training, and evaluation.
@@ -648,13 +646,14 @@
               <li>Model evaluation concepts</li>
               <li>Guided project exercises</li>
             </ul>
-            <a class="btn btn-outline"
+            <a class="btn btn-primary"
                href="https://docs.google.com/forms/d/e/1FAIpQLSfs6i6IX2VY7UxD7PfuQFddSDhJZ1Bq3nMp9V-VK0BOsmqJjg/viewform?usp=dialog"
                target="_blank" rel="noopener noreferrer">
-              Register Interest →
+              Apply for this internship →
             </a>
           </article>
 
+          <!-- WEB DEVELOPMENT INTERNSHIP -->
           <article class="program-card">
             <div class="program-icon">💻</div>
             <span class="tag">PLANNED TRACK</span>
@@ -668,10 +667,10 @@
               <li>JavaScript fundamentals</li>
               <li>Website project practice</li>
             </ul>
-            <a class="btn btn-outline"
+            <a class="btn btn-primary"
                href="https://docs.google.com/forms/d/e/1FAIpQLSfs6i6IX2VY7UxD7PfuQFddSDhJZ1Bq3nMp9V-VK0BOsmqJjg/viewform?usp=dialog"
                target="_blank" rel="noopener noreferrer">
-              Register Interest →
+              Apply for this internship →
             </a>
           </article>
 
@@ -682,8 +681,8 @@
     <section id="how-it-works">
       <div class="container">
         <div class="section-heading">
-          <span class="eyebrow">SIMPLE & PRACTICAL</span>
-          <h2>How it works</h2>
+          <span class="eyebrow">SIMPLE &amp; PRACTICAL</span>
+          <h2>How It Works</h2>
           <p>
             A structured path to help you learn, practise, and showcase
             your work.
@@ -732,7 +731,7 @@
             Our goal is to make skill development approachable, encourage
             curiosity, and help learners build work they can explain and share.
           </p>
-          <a class="btn btn-gold" href="#programs">Explore Learning Tracks →</a>
+          <a class="btn btn-gold" href="#programs">Explore Internship Tracks →</a>
         </div>
 
         <div class="about-list">
@@ -760,7 +759,7 @@
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">NEED TO KNOW?</span>
-          <h2>Frequently asked questions</h2>
+          <h2>Frequently Asked Questions</h2>
           <p>Some helpful details before you apply.</p>
         </div>
 
@@ -775,7 +774,7 @@
           </details>
 
           <details>
-            <summary>Are the programs online?</summary>
+            <summary>Are the internships online?</summary>
             <p>
               The learning initiative is designed for virtual participation.
               Specific schedules, instructions, and requirements will be
@@ -795,10 +794,9 @@
           <details>
             <summary>Will I receive a certificate?</summary>
             <p>
-              Certificate eligibility and any applicable conditions must be
+              Certificate eligibility and any applicable conditions will be
               confirmed in the official details for the particular program.
-              Please do not assume a certificate is guaranteed simply by
-              submitting an application.
+              Submitting an application alone does not guarantee a certificate.
             </p>
           </details>
 
@@ -813,8 +811,9 @@
           <details>
             <summary>How do I apply?</summary>
             <p>
-              Click any Apply or Register Interest button on this website.
-              It will open the TalentSpring Academy Google Form.
+              Click any Apply for this internship button. It opens the
+              TalentSpring Academy Google Form, where you can submit your
+              application.
             </p>
           </details>
         </div>
@@ -832,7 +831,7 @@
         <a class="btn btn-primary"
            href="https://docs.google.com/forms/d/e/1FAIpQLSfs6i6IX2VY7UxD7PfuQFddSDhJZ1Bq3nMp9V-VK0BOsmqJjg/viewform?usp=dialog"
            target="_blank" rel="noopener noreferrer">
-          Open Application Form ↗
+          Apply Now ↗
         </a>
       </div>
     </section>
@@ -865,6 +864,5 @@
     document.getElementById("year").textContent =
       new Date().getFullYear();
   </script>
-
 </body>
 </html>
