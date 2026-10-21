@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TalentSpring Academy offers virtual, project-based internship learning opportunities for students. Learn. Build. Grow.">
+  <meta name="description" content="TalentSpring Academy offers virtual, project-based internships in Data Science, AI and Machine Learning, and Web Development. Learn. Build. Grow.">
   <meta name="theme-color" content="#102c28">
+
   <title>TalentSpring Academy | Learn. Build. Grow.</title>
 
   <style>
@@ -321,19 +322,15 @@
     }
 
     .tag {
-      background: #fff0d0;
-      color: #785b19;
+      display: inline-block;
+      background: #dcefe2;
+      color: #206340;
       border-radius: 5px;
       font-size: 10px;
       font-weight: 800;
-      padding: 4px 8px;
+      padding: 5px 9px;
       margin-bottom: 13px;
       letter-spacing: .5px;
-    }
-
-    .tag-open {
-      background: #dcefe2;
-      color: #206340;
     }
 
     .how-grid {
@@ -437,6 +434,11 @@
       color: var(--muted);
       margin-top: 13px;
       font-size: 14px;
+    }
+
+    .fee-highlight {
+      color: var(--green);
+      font-weight: 800;
     }
 
     .cta {
@@ -551,6 +553,7 @@
 </head>
 
 <body>
+  <!-- NAVIGATION -->
   <header>
     <nav class="container">
       <a class="brand" href="#home" aria-label="TalentSpring Academy home">
@@ -573,6 +576,7 @@
   </header>
 
   <main>
+    <!-- HERO SECTION -->
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
@@ -581,12 +585,16 @@
           <p>
             Learn by doing. Build practical projects, strengthen your portfolio,
             and take the next step in your career with TalentSpring Academy's
-            virtual, project-based internship learning opportunities.
+            virtual, project-based internship opportunities.
           </p>
 
           <div class="hero-buttons">
-            <a class="btn btn-primary" href="#programs">Explore Internship Tracks →</a>
-            <a class="btn btn-outline" href="#how-it-works">How It Works</a>
+            <a class="btn btn-primary" href="#programs">
+              Explore Internship Tracks →
+            </a>
+            <a class="btn btn-outline" href="#how-it-works">
+              How It Works
+            </a>
           </div>
         </div>
 
@@ -598,6 +606,7 @@
       </div>
     </section>
 
+    <!-- INTERNSHIP TRACKS -->
     <section class="programs" id="programs">
       <div class="container">
         <div class="section-heading">
@@ -611,14 +620,13 @@
 
         <div class="program-grid">
 
-          <!-- DATA SCIENCE INTERNSHIP -->
           <article class="program-card">
             <div class="program-icon">📊</div>
-            <span class="tag tag-open">PILOT PROGRAM</span>
+            <span class="tag">INTERNSHIP PROGRAM</span>
             <h3>Data Science &amp; Analytics</h3>
             <p>
               Explore data cleaning, analysis, visualization, and insight
-              generation through a practical project.
+              generation through practical projects.
             </p>
             <ul>
               <li>Data analysis fundamentals</li>
@@ -632,14 +640,13 @@
             </a>
           </article>
 
-          <!-- AI AND MACHINE LEARNING INTERNSHIP -->
           <article class="program-card">
             <div class="program-icon">🤖</div>
-            <span class="tag">PLANNED TRACK</span>
+            <span class="tag">INTERNSHIP PROGRAM</span>
             <h3>AI &amp; Machine Learning</h3>
             <p>
-              Learn the foundations of intelligent systems, data preparation,
-              model training, and evaluation.
+              Explore intelligent systems, data preparation, model training,
+              and evaluation through guided practical projects.
             </p>
             <ul>
               <li>Machine learning basics</li>
@@ -653,13 +660,12 @@
             </a>
           </article>
 
-          <!-- WEB DEVELOPMENT INTERNSHIP -->
           <article class="program-card">
             <div class="program-icon">💻</div>
-            <span class="tag">PLANNED TRACK</span>
+            <span class="tag">INTERNSHIP PROGRAM</span>
             <h3>Web Development</h3>
             <p>
-              Explore responsive website design, frontend development,
+              Learn responsive website design, frontend development,
               and the fundamentals of building for the web.
             </p>
             <ul>
@@ -678,14 +684,14 @@
       </div>
     </section>
 
+    <!-- HOW IT WORKS -->
     <section id="how-it-works">
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow">SIMPLE &amp; PRACTICAL</span>
           <h2>How It Works</h2>
           <p>
-            A structured path to help you learn, practise, and showcase
-            your work.
+            A structured path to help you learn, practise, and showcase your work.
           </p>
         </div>
 
@@ -699,13 +705,13 @@
           <div class="step">
             <div class="step-number">02</div>
             <h3>Get Started</h3>
-            <p>Review the program instructions and follow the learning plan shared with selected participants.</p>
+            <p>Follow the program instructions and learning plan shared with participants.</p>
           </div>
 
           <div class="step">
             <div class="step-number">03</div>
             <h3>Build Projects</h3>
-            <p>Practise your skills through tasks and work towards a project deliverable.</p>
+            <p>Practise your skills through tasks and work towards project deliverables.</p>
           </div>
 
           <div class="step">
@@ -717,27 +723,30 @@
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section class="about" id="about">
       <div class="container about-grid">
         <div>
           <span class="eyebrow">ABOUT US</span>
           <h2>Building skills through learning by doing.</h2>
           <p>
-            TalentSpring Academy is an early-stage learning initiative designed
-            to help students explore technology and practise practical skills
-            through structured projects.
+            TalentSpring Academy is a student-focused learning initiative
+            designed to help students explore technology and practise
+            practical skills through structured projects.
           </p>
           <p>
             Our goal is to make skill development approachable, encourage
             curiosity, and help learners build work they can explain and share.
           </p>
-          <a class="btn btn-gold" href="#programs">Explore Internship Tracks →</a>
+          <a class="btn btn-gold" href="#programs">
+            Explore Internship Tracks →
+          </a>
         </div>
 
         <div class="about-list">
           <div>
             <strong>🌍 Virtual Learning</strong>
-            <span>Designed for remote participation, subject to each program's schedule.</span>
+            <span>Remote learning opportunities with program-specific schedules.</span>
           </div>
           <div>
             <strong>🛠️ Practical Projects</strong>
@@ -755,6 +764,7 @@
       </div>
     </section>
 
+    <!-- FREQUENTLY ASKED QUESTIONS -->
     <section id="faq">
       <div class="container">
         <div class="section-heading">
@@ -764,47 +774,54 @@
         </div>
 
         <div class="faq-list">
+
           <details>
             <summary>Who can apply?</summary>
             <p>
               Students interested in learning and developing practical skills
               can submit an application. Eligibility and selection depend on
-              the specific program.
+              the program requirements.
             </p>
           </details>
 
           <details>
             <summary>Are the internships online?</summary>
             <p>
-              The learning initiative is designed for virtual participation.
-              Specific schedules, instructions, and requirements will be
-              communicated for each program.
+              The internships are designed for virtual participation.
+              Specific schedules, tasks, and requirements will be communicated
+              for each program.
             </p>
           </details>
 
           <details>
-            <summary>Is there an application fee?</summary>
+            <summary>Is there an internship application or participation fee?</summary>
             <p>
-              There is no application fee charged by this website. Any future
-              optional paid services, if introduced, should have their costs
-              and terms clearly disclosed before purchase.
+              No. Applying for and participating in a TalentSpring Academy
+              internship is free. There is no internship application fee
+              or participation fee. The certificate is optional and costs
+              <span class="fee-highlight">₹149</span> for students who choose
+              to obtain one.
             </p>
           </details>
 
           <details>
-            <summary>Will I receive a certificate?</summary>
+            <summary>Is a certificate available, and how much does it cost?</summary>
             <p>
-              Certificate eligibility and any applicable conditions will be
-              confirmed in the official details for the particular program.
-              Submitting an application alone does not guarantee a certificate.
+              Students who successfully complete the internship requirements
+              can choose to obtain a certificate for
+              <span class="fee-highlight">₹149</span>. The certificate is
+              optional and is not automatically included. There is no charge
+              for applying to or participating in the internship. Certificate
+              eligibility and payment instructions will be communicated by
+              TalentSpring Academy before payment.
             </p>
           </details>
 
           <details>
-            <summary>Does applying guarantee selection or a job?</summary>
+            <summary>Does applying guarantee a job or stipend?</summary>
             <p>
-              No. Submitting an application does not guarantee selection,
-              employment, a stipend, placement, or a job offer.
+              No. Applying does not guarantee selection, employment,
+              a stipend, placement, or a job offer.
             </p>
           </details>
 
@@ -812,14 +829,16 @@
             <summary>How do I apply?</summary>
             <p>
               Click any Apply for this internship button. It opens the
-              TalentSpring Academy Google Form, where you can submit your
+              TalentSpring Academy Google Form where you can submit your
               application.
             </p>
           </details>
+
         </div>
       </div>
     </section>
 
+    <!-- FINAL APPLICATION SECTION -->
     <section class="cta">
       <div class="container">
         <span class="eyebrow">TAKE THE FIRST STEP</span>
@@ -837,6 +856,7 @@
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -848,10 +868,11 @@
       </div>
 
       <div class="notice">
-        TalentSpring Academy is an early-stage learning initiative.
-        Program availability, selection, duration, completion requirements,
-        and certificates are subject to official program communications.
-        Participation does not guarantee employment, placement, or a stipend.
+        Internship participation is free. An optional certificate is available
+        for ₹149, subject to successful completion of the applicable program
+        requirements. Program details and eligibility are communicated by
+        TalentSpring Academy. Participation does not guarantee employment,
+        placement, or a stipend.
       </div>
 
       <div class="notice">
